@@ -10,3 +10,7 @@ npm install gsap
 ## 실행
 
 - npm run dev
+
+## build
+
+- npm run build

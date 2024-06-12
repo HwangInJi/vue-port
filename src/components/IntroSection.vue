@@ -47,7 +47,7 @@
     flex-direction: column;
     padding: 16px;
     text-transform: uppercase;
-    background-color: #007481;
+    background-color: var(--white);
 
     .intro__title {
       font-size: 8.5vw;
@@ -62,13 +62,13 @@
     }
 
     .intro__lines {
-      width: 250px;
+      width: 100%;
 
       .line {
         display: block;
         width: 100%;
         height: 1px;
-        background-color: #ea00169c;
+        background-color: rgb(234 0 22 / 23%);
         margin-bottom: 0.5vw;
 
         &:nth-child(1) {
@@ -131,8 +131,25 @@
         overflow: hidden;
         filter: grayscale(70%);
         transition: all 0.3s;
-        z-index: 1000;
       }
+      .img:hover {
+        filter: none; /* 그레이스케일 필터 제거 */
+        z-index: 1000;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .intro__inner {
+      height: 100%;
+    }
+    .intro__title {
+      font-size: 7.5vw;
+    }
+
+    .text > div {
+      font-size: 5.8vw;
     }
   }
 }
